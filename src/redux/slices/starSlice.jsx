@@ -3,11 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 const getStarFromStorage = () => {
   try {
     const starData = localStorage.getItem("star");
-    // Eğer starData mevcut değilse veya geçerli bir JSON değilse, boş bir dizi döneriz.
     return starData ? JSON.parse(starData) : [];
   } catch (error) {
     console.error("Error parsing star data from localStorage", error);
-    return []; // Geçersiz JSON veya başka bir hata durumunda boş bir dizi döneriz.
+    return [];
   }
 };
 
