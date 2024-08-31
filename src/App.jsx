@@ -22,9 +22,15 @@ function App() {
   );
   const { productsStar, drawerStar } = useSelector((store) => store.star);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(calculateBasket(totalAmount));
   }, []);
+
+  const handleRemoveFromBasket = (productId) => {
+    dispatch(removeToBasket({ id: productId }));
+    dispatch(calculateBasket());
+  };
   return (
     <div>
       <PageContainer>
@@ -58,7 +64,7 @@ function App() {
                   </div>
 
                   <FaRegTimesCircle
-                    onClick={() => dispatch(removeToBasket({ id: product.id }))}
+                    onClick={() => handleRemoveFromBasket(product.id)}
                     className="remove-icon"
                   />
                 </div>

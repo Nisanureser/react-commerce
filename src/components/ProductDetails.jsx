@@ -8,9 +8,11 @@ import { CiCircleMinus } from "react-icons/ci";
 import { CiStar } from "react-icons/ci";
 import { addToBasket, calculateBasket } from "../redux/slices/basketSlice";
 import { addToStar } from "../redux/slices/starSlice";
+import CustomAlert from "../components/CustomAlert";
 
 function ProductDetails() {
   const [count, setCount] = useState(0);
+  const [showAlert, setShowAlert] = useState(false);
   const { id } = useParams();
   const { products, selectedProduct } = useSelector((store) => store.product);
 
@@ -24,16 +26,20 @@ function ProductDetails() {
     }
   };
   const addBasket = () => {
-    const payload = {
-      id,
-      price,
-      image,
-      title,
-      description,
-      count,
-    };
-    dispatch(addToBasket(payload));
-    dispatch(calculateBasket());
+    if (count > 0) {
+      const payload = {
+        id,
+        price,
+        image,
+        title,
+        description,
+        count,
+      };
+      dispatch(addToBasket(payload));
+      dispatch(calculateBasket());
+    } else {
+      setShowAlert(true);
+    }
   };
   const addStar = () => {
     const payload = {
@@ -76,6 +82,12 @@ function ProductDetails() {
           </div>
           <div className="button">
             <button onClick={addBasket}>SEPETE EKLE</button>
+            {showAlert && (
+              <CustomAlert
+                message="Please select at least one item to add to the basket."
+                onClose={() => setShowAlert(false)}
+              />
+            )}
             <CiStar onClick={addStar} className="starIcon" />
           </div>
         </div>

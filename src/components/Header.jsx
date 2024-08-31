@@ -16,6 +16,7 @@ function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { products } = useSelector((store) => store.basket);
+
   const changeTheme = () => {
     const root = document.getElementById("root");
     SetTheme(!theme);

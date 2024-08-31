@@ -1,0 +1,41 @@
+.alert {
+  background-color: #ffd700; /* Galatasaray yellow */
+  color: #a51c30; /* Galatasaray red */
+  border: 2px solid #a51c30; /* Galatasaray red */
+  padding: 15px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slide-down 0.5s ease-out, fade-out 0.5s 5s ease-out forwards;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateX(-50%) translateY(-100px);
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+.alert button {
+  margin-left: 5px;
+  border: 2px solid #a51c30;
+  background-color: #fff;
+  color: #a51c30;
+  border-radius: 5px;
+}
