@@ -10,6 +10,7 @@ import Badge from "@mui/material/Badge";
 import { useDispatch, useSelector } from "react-redux";
 import { setDrawer } from "../redux/slices/basketSlice";
 import { setStarDrawer } from "../redux/slices/starSlice";
+import { setFilter } from "../redux/slices/filterSlice";
 
 function Header() {
   const [theme, SetTheme] = useState(false);
@@ -29,6 +30,10 @@ function Header() {
     }
   };
 
+  const handleSearch = (e) => {
+    dispatch(setFilter(e.target.value));
+  };
+
   return (
     <div
       style={{
@@ -43,7 +48,12 @@ function Header() {
         <p className="logo-text">GALATASARAY STORE </p>
       </div>
       <div className="flex-row">
-        <input type="text" className="search-input" placeholder="ARA" />
+        <input
+          type="text"
+          className="search-input"
+          placeholder="ARA"
+          onChange={handleSearch}
+        />
         <div>
           {theme ? (
             <FaMoon className="icon" onClick={changeTheme} />
