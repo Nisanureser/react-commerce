@@ -6,7 +6,6 @@ This project is a simple e-commerce application built with **React**, **Redux To
 
 ## 🚀 About the Project
 
-Throughout the course, the following steps were implemented to build a fully functional e-commerce app:
 
 1. **Setup of Redux and React Router**
 2. **Fetching product data using Axios**
