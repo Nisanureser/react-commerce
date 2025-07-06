@@ -15,7 +15,7 @@ This project is a  e-commerce application built with **React**, **Redux Toolkit*
 6. **Add-to-cart and remove-from-cart functionality**
 7. **UI improvements and final touches**
 
-> This was the final and most challenging part of the course – but it’s also where everything comes together!
+
 
 ---
 
@@ -25,7 +25,7 @@ This project is a  e-commerce application built with **React**, **Redux Toolkit*
 - Redux Toolkit  
 - React Router DOM  
 - Axios  
-- CSS *(or Tailwind/Bootstrap – update if used)*
+- CSS 
 
 ---
 
