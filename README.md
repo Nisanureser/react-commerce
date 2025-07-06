@@ -1,6 +1,6 @@
 # 🛒 React Redux E-Commerce App
 
-This project is a simple e-commerce application built with **React**, **Redux Toolkit**, and **React Router**. It was developed as part of a learning series focused on understanding Redux state management and routing in real-world applications.
+This project is a  e-commerce application built with **React**, **Redux Toolkit**, and **React Router**. It was developed as part of a learning series focused on understanding Redux state management and routing in real-world applications.
 
 ---
 
