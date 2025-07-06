@@ -18,6 +18,17 @@ This project is a  e-commerce application built with **React**, **Redux Toolkit*
 
 
 ---
+🔍 Features
+Dynamic routing between product list and detail pages
+
+Global product and cart state management using Redux
+
+Add and remove products from the cart
+
+Loading indicator while fetching data
+
+Responsive UI design
+
 
 ## 🛠️ Technologies Used
 
@@ -28,6 +39,8 @@ This project is a  e-commerce application built with **React**, **Redux Toolkit*
 - CSS 
 
 ---
+📸 Screenshots
+
 
 ## 📦 Installation
 
